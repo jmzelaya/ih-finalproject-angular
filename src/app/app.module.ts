@@ -10,6 +10,8 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { LogInComponent } from './pages/log-in/log-in.component';
 import { UserHomePageComponent } from './pages/user-home-page/user-home-page.component';
 
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,10 @@ import { UserHomePageComponent } from './pages/user-home-page/user-home-page.com
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyA-Az-KWwgFia0wnW8YNa14evOIBojM3Fs'
+    })
   ],
   providers: [AuthApiService],
   bootstrap: [AppComponent]

@@ -1,5 +1,9 @@
 <h2> Sign Up </h2>
 
+<p class="error" *ngIf="loginError">
+  {{ loginError }}
+</p>
+
 <form (ngSubmit)="submitSignup()">
   <label for="first-name-input">First Name</label>
   <input id="first-name-input" type="text" placeholder="Max"
