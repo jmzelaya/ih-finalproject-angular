@@ -11,6 +11,8 @@ import { LogInComponent } from './pages/log-in/log-in.component';
 import { UserHomePageComponent } from './pages/user-home-page/user-home-page.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { UserPageComponent } from './pages/user-page/user-page.component';
+import { FriendPageComponent } from './pages/friend-page/friend-page.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { AgmCoreModule } from '@agm/core';
     SignUpComponent,
     LogInComponent,
     UserHomePageComponent,
+    UserPageComponent,
+    FriendPageComponent,
 
   ],
   imports: [
