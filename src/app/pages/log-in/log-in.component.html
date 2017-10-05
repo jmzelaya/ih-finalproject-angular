@@ -1,0 +1,15 @@
+<h2> Log In </h2>
+
+
+<form (ngSubmit) ="loginSubmit()">
+
+  <label for="email-input">Email</label>
+  <input id="email-input" type="email" placeholder="madmax@furyroad.com"
+    name="email" [(ngModel)]= "loginUser.loginUsername"/>
+
+  <label for="password-input">Password</label>
+  <input id="password-input" type="password" placeholder="*******"
+    name="userPassword" [(ngModel)]="loginUser.loginPassword"/>
+
+  <button> Log In </button>
+</form>

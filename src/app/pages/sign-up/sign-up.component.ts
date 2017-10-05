@@ -40,6 +40,7 @@ export class SignUpComponent implements OnInit {
         (errInfo) => {
           console.log('Signup Error', errInfo);
           if(errInfo.status){
+            console.log('cow here1');
             this.errorMessage = 'Validation error';
           }
 

@@ -7,11 +7,15 @@ import { AuthApiService } from './services/auth-api.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { LogInComponent } from './pages/log-in/log-in.component';
+import { UserHomePageComponent } from './pages/user-home-page/user-home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
+    LogInComponent,
+    UserHomePageComponent,
 
   ],
   imports: [
