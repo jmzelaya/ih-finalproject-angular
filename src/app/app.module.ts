@@ -13,6 +13,8 @@ import { UserHomePageComponent } from './pages/user-home-page/user-home-page.com
 import { AgmCoreModule } from '@agm/core';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { FriendPageComponent } from './pages/friend-page/friend-page.component';
+import { SuppliesComponent } from './pages/supplies/supplies.component';
+import { RecentSurvivorsComponent } from './pages/recent-survivors/recent-survivors.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { FriendPageComponent } from './pages/friend-page/friend-page.component';
     UserHomePageComponent,
     UserPageComponent,
     FriendPageComponent,
+    SuppliesComponent,
+    RecentSurvivorsComponent,
 
   ],
   imports: [

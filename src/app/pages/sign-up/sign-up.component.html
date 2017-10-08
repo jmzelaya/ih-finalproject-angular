@@ -1,25 +1,37 @@
-<h2> Sign Up </h2>
 
 <p class="error" *ngIf="loginError">
   {{ loginError }}
 </p>
 
-<form (ngSubmit)="submitSignup()">
-  <label for="first-name-input">First Name</label>
-  <input id="first-name-input" type="text" placeholder="Max"
-    name="firstName" [(ngModel)] = "newUser.signupFirstName" />
 
-  <label for="last-name-input">Last Name</label>
-  <input id="last-name-input" type="text" placeholder="Rockatansky"
-    name="lastName" [(ngModel)]= "newUser.signupLastName"/>
+<div class="left-promo">
 
-  <label for="email-input">Email</label>
-  <input id="email-input" type="email" placeholder="madmax@furyroad.com"
-    name="email" [(ngModel)]= "newUser.signupEmail"/>
 
-  <label for="password-input">Password</label>
-  <input id="password-input" type="password" placeholder="*******"
-    name="userPassword" [(ngModel)]="newUser.signupPassword"/>
+</div>
 
-  <button> Sign Up </button>
-</form>
+<div class="right-signup">
+  <h2> Sign Up </h2>
+  <form (ngSubmit)="submitSignup()">
+    <label for="first-name-input">First Name</label>
+    <input id="first-name-input" type="text" placeholder="Max"
+      name="firstName" [(ngModel)] = "newUser.signupFirstName" />
+    <br />
+
+    <label for="last-name-input">Last Name</label>
+    <input id="last-name-input" type="text" placeholder="Rockatansky"
+      name="lastName" [(ngModel)]= "newUser.signupLastName"/>
+    <br />
+
+    <label for="email-input">Email</label>
+    <input id="email-input" type="email" placeholder="madmax@furyroad.com"
+      name="email" [(ngModel)]= "newUser.signupEmail"/>
+    <br />
+
+    <label for="password-input">Password</label>
+    <input id="password-input" type="password" placeholder="*******"
+      name="userPassword" [(ngModel)]="newUser.signupPassword"/>
+    <br />
+
+    <button> Sign Up </button>
+  </form>
+</div>

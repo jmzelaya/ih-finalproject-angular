@@ -1,16 +1,15 @@
 <header>
   <nav>
     <a routerLink="/"> Home </a>
-    <br />
+
     <a routerLink="/login"> Log In </a>
-    <br />
 
     <button (click) = "logMeOut()"> Log Out </button>
   </nav>
 </header>
 
 
-<agm-map
+<!-- <agm-map
 [latitude]="lat"
 [longitude]="lng"
 [zoom] = "zoom"
@@ -26,6 +25,6 @@
   (dragEnd)="markerDragEnd(m, $event)"
   >
 </agm-marker>
-</agm-map>
+</agm-map> -->
 
 <router-outlet></router-outlet>
