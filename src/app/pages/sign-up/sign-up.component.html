@@ -20,49 +20,36 @@
 
 
     <div class="col-sm-6">
-      <h2> Sign Up </h2>
       <form (ngSubmit)="submitSignup()">
-        <label for="first-name-input">First Name</label>
-        <input id="first-name-input" type="text" placeholder="Max"
-          name="firstName" [(ngModel)] = "newUser.signupFirstName" />
-        <br />
+        <h2> Sign Up </h2>
 
-        <label for="last-name-input">Last Name</label>
-        <input id="last-name-input" type="text" placeholder="Rockatansky"
-          name="lastName" [(ngModel)]= "newUser.signupLastName"/>
-        <br />
+        <div class="form-group">
+          <label for="first-name-input">First Name</label>
+          <input id="first-name-input" type="text" placeholder="Max"
+            class="form-control" name="firstName" [(ngModel)] = "newUser.signupFirstName" />
+          <br />
+        </div> <!-- first name input -->
+        <div class="form-group">
+          <label for="last-name-input">Last Name</label>
+          <input id="last-name-input" type="text" placeholder="Rockatansky"
+            class="form-control" name="lastName" [(ngModel)]= "newUser.signupLastName"/>
+          <br />
+        </div>
+        <div class="form-group">
+          <label for="email-input">Email</label>
+          <input id="email-input" type="email" placeholder="madmax@furyroad.com"
+            class="form-control" name="email" [(ngModel)]= "newUser.signupEmail"/>
+          <br />
+        </div>
+        <div class="form-group">
+          <label for="password-input">Password</label>
+          <input id="password-input" type="password" placeholder="*******"
+            class="form-control" name="userPassword" [(ngModel)]="newUser.signupPassword"/>
+          <br />
+        </div>
 
-        <label for="email-input">Email</label>
-        <input id="email-input" type="email" placeholder="madmax@furyroad.com"
-          name="email" [(ngModel)]= "newUser.signupEmail"/>
-        <br />
-
-        <label for="password-input">Password</label>
-        <input id="password-input" type="password" placeholder="*******"
-          name="userPassword" [(ngModel)]="newUser.signupPassword"/>
-        <br />
-
-        <button> Sign Up </button>
+        <button type="submit" class="btn btn-default">Sign Up</button>
       </form>
     </div>
   </div>
 </div>
-
-
-<form (ngSubmit)="submitSignup()">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
-  </div>
-
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
