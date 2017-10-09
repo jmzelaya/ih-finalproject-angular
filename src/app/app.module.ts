@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AuthApiService } from './services/auth-api.service';
+import { PostApiService } from './services/post-api.service';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
@@ -11,13 +14,8 @@ import { LogInComponent } from './pages/log-in/log-in.component';
 import { UserHomePageComponent } from './pages/user-home-page/user-home-page.component';
 
 import { AgmCoreModule } from '@agm/core';
-import { UserPageComponent } from './pages/user-page/user-page.component';
-import { FriendPageComponent } from './pages/friend-page/friend-page.component';
 import { SuppliesComponent } from './pages/supplies/supplies.component';
-import { RecentSurvivorsComponent } from './pages/recent-survivors/recent-survivors.component';
-import { PostFormComponent } from './components/post-form/post-form.component';
 
-import { PostApiService } from './services/post-api.service';
 
 
 @NgModule({
@@ -26,11 +24,7 @@ import { PostApiService } from './services/post-api.service';
     SignUpComponent,
     LogInComponent,
     UserHomePageComponent,
-    UserPageComponent,
-    FriendPageComponent,
     SuppliesComponent,
-    RecentSurvivorsComponent,
-    PostFormComponent,
 
   ],
   imports: [

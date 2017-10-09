@@ -22,7 +22,7 @@ export class UserHomePageComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.postThang.getPosts()
+    this.postThang.getMyPosts()
       .subscribe(
         (postsFromApi:any[]) => {
           this.posts = postsFromApi;
