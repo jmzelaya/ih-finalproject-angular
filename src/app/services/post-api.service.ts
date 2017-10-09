@@ -15,9 +15,10 @@ export class PostApiService {
   // GET /api/phones
   getMyPosts() {
     return this.httpThang.get(
-      this.baseUrl + '/api/myposts'
+      this.baseUrl + '/api/myposts',
+      {withCredentials: true}
     );
   }
 
-  
+
 }
