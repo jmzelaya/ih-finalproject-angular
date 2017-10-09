@@ -34,7 +34,7 @@ export class LogInComponent implements OnInit {
     this.authThang.postLogin(this.loginUser)
       .subscribe(
         (userInfo) => {
-          this.routerThang.navigate([''])
+          this.routerThang.navigate(['/user-home'])
         },
 
         (errInfo) => {
