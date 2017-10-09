@@ -37,9 +37,16 @@ export class UserHomePageComponent implements OnInit {
       );//CLOSE this.postThang.getMyPosts()
 
 
+
+  }//CLOSE ngOnInit()
+
+  receiveCow() {
+    //call servide
     this.postThang.postNewPost(this.newPost)
       .subscribe(
         (fullPostDetails) => {
+          console.log('New post success', fullPostDetails);
+          this.posts.unshift(this.newPost);
           this.newPost = {
             textContent: ''
           };

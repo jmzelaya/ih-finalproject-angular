@@ -21,6 +21,7 @@ export class PostApiService {
   }//CLOSE getMyPosts()
 
   postNewPost(postFields: PostInfo){
+    console.log(postFields);
     return this.httpThang.post(
       this.baseUrl + '/api/posts',
       postFields,

@@ -10,10 +10,10 @@ export class AllyApiService {
     private httpThang: HttpClient
   ) { }
 
-  //GET   /api/user/allies
+  //GET   /api/my-allies
   getAllies() {
     return this.httpThang.get(
-      this.baseUrl + '/api/allies'
+      this.baseUrl + '/api/my-allies'
     );
   }//CLOSE getAllies
 

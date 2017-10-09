@@ -3,53 +3,54 @@
   {{ loginError }}
 </p>
 
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <h3> The end of the world can be tough
-        <br />
-        but, it doesn't have to be.
-      </h3>
-      <ul>
-        <li>Connect with survivors</li>
-        <li>Find supplies</li>
-        <li>Stay up to date with the hoard</li>
-      </ul>
-    </div>
-
-
-    <div class="col-sm-6">
-      <form (ngSubmit)="submitSignup()">
-        <h2> Sign Up </h2>
-
-        <div class="form-group">
-          <label for="first-name-input">First Name</label>
-          <input id="first-name-input" type="text" placeholder="Max"
-            class="form-control" name="firstName" [(ngModel)] = "newUser.signupFirstName" />
+<div class="home-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h3> The end of the world can be tough
           <br />
-        </div> <!-- first name input -->
-        <div class="form-group">
-          <label for="last-name-input">Last Name</label>
-          <input id="last-name-input" type="text" placeholder="Rockatansky"
-            class="form-control" name="lastName" [(ngModel)]= "newUser.signupLastName"/>
-          <br />
-        </div>
-        <div class="form-group">
-          <label for="email-input">Email</label>
-          <input id="email-input" type="email" placeholder="madmax@furyroad.com"
-            class="form-control" name="email" [(ngModel)]= "newUser.signupEmail"/>
-          <br />
-        </div>
-        <div class="form-group">
-          <label for="password-input">Password</label>
-          <input id="password-input" type="password" placeholder="*******"
-            class="form-control" name="userPassword" [(ngModel)]="newUser.signupPassword"/>
-          <br />
-        </div>
+          but, it doesn't have to be.
+        </h3>
+        <ul>
+          <li>Connect with survivors</li>
+          <li>Find supplies</li>
+          <li>Stay up to date with the hoard</li>
+        </ul>
+      </div>
 
-        <button type="submit" class="btn btn-default">Sign Up</button>
-      </form>
+
+      <div class="col-sm-6">
+        <form (ngSubmit)="submitSignup()">
+          <h2> Sign Up </h2>
+
+          <div class="form-group">
+            <label for="first-name-input">First Name</label>
+            <input id="first-name-input" type="text" placeholder="Max"
+              class="form-control" name="firstName" [(ngModel)] = "newUser.signupFirstName" />
+            <br />
+          </div> <!-- first name input -->
+          <div class="form-group">
+            <label for="last-name-input">Last Name</label>
+            <input id="last-name-input" type="text" placeholder="Rockatansky"
+              class="form-control" name="lastName" [(ngModel)]= "newUser.signupLastName"/>
+            <br />
+          </div>
+          <div class="form-group">
+            <label for="email-input">Email</label>
+            <input id="email-input" type="email" placeholder="madmax@furyroad.com"
+              class="form-control" name="email" [(ngModel)]= "newUser.signupEmail"/>
+            <br />
+          </div>
+          <div class="form-group">
+            <label for="password-input">Password</label>
+            <input id="password-input" type="password" placeholder="*******"
+              class="form-control" name="userPassword" [(ngModel)]="newUser.signupPassword"/>
+            <br />
+          </div>
+
+          <button type="submit" class="btn btn-default">Sign Up</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
