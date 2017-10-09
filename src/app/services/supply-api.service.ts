@@ -16,7 +16,7 @@ export class SupplyApiService {
     return this.httpThang.get(
       this.baseUrl + '/api/supplies'
     )
-  }
+  }//CLOSE getSupplies()
 
   postSupply(supplyFields: SupplyInfo){
     return this.httpThang.post(

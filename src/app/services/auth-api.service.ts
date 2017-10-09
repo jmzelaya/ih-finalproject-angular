@@ -44,5 +44,10 @@ export class AuthApiService {
     );
   }
 
+  getRecentSurvivors(){
+    return this.httpThang.get(
+      this.baseUrl + '/api/users'
+    )
+  }
 
-}
+}//CLOSE class AuthApiService{}

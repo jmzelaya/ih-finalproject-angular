@@ -15,6 +15,7 @@ import { UserHomePageComponent } from './pages/user-home-page/user-home-page.com
 
 import { AgmCoreModule } from '@agm/core';
 import { SuppliesComponent } from './pages/supplies/supplies.component';
+import { RecentSurvivorComponent } from './components/recent-survivor/recent-survivor.component';
 
 
 
@@ -25,6 +26,7 @@ import { SuppliesComponent } from './pages/supplies/supplies.component';
     LogInComponent,
     UserHomePageComponent,
     SuppliesComponent,
+    RecentSurvivorComponent,
 
   ],
   imports: [

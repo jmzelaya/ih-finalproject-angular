@@ -7,12 +7,19 @@
     <button> Post </button>
   </form>
 
-  <div *ngFor= "let onePost of posts">
-    <div class="one-post">
-      <p>
-        {{ onePost.textContent }}
-      </p>
-    </div>
 
+    <div class="row">
+      <div class="col-sm-8">
+        <div *ngFor= "let onePost of posts">
+          <div class="one-post">
+            <p>
+              {{ onePost.textContent }}
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <app-recent-survivor></app-recent-survivor>
+        </div>
+      </div>
+    </div>
   </div>
-</div>

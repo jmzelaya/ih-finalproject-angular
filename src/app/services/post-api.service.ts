@@ -12,7 +12,7 @@ export class PostApiService {
     private httpThang: HttpClient
   ) { }
 
-  // GET /api/phones
+  // GET /api/posts
   getMyPosts() {
     return this.httpThang.get(
       this.baseUrl + '/api/myposts',
