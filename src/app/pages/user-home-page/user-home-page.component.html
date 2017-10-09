@@ -1,5 +1,5 @@
 <div class="post-feed-wrapper">
-  <form (ngSubmit) = "saveNewPost()">
+  <form (ngSubmit) = "postNewPost()">
     <label for="textContent"></label>
     <input id="textContent" type="text" placeholder="How's the apocalypse today?"
       name="postContent" [(ngModel)]="newPost.textContent"/>

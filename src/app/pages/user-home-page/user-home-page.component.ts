@@ -18,6 +18,8 @@ export class UserHomePageComponent implements OnInit {
     textContent: ''
   };
 
+  errorMessage: string;
+
   constructor(
     private routerThang : Router,
     private httpThang: HttpClient,
@@ -32,7 +34,28 @@ export class UserHomePageComponent implements OnInit {
         (postsFromApi: any[]) => {
           this.posts = postsFromApi;
         }
-      );
+      );//CLOSE this.postThang.getMyPosts()
+
+
+    this.postThang.postNewPost(this.newPost)
+      .subscribe(
+        (fullPostDetails) => {
+          this.newPost = {
+            textContent: ''
+          };
+        },
+
+        (errorInfo) => {
+          if(errorInfo.status === 400) {
+            this.errorMessage = 'Validation error'
+          }
+
+          else {
+            this.errorMessage = 'Unknown error. Try again later'
+          }
+          console.log('New Phone Error', errorInfo)
+        }
+      )
   }
 
 

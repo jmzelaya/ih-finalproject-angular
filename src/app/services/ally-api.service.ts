@@ -1,8 +1,22 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
 
 @Injectable()
 export class AllyApiService {
 
-  constructor() { }
+  baseUrl: string = 'http://localhost:3000';
+
+  constructor(
+    private httpThang: HttpClient
+  ) { }
+
+  //GET   /api/user/allies
+  getAllies() {
+    return this.httpThang.get(
+      this.baseUrl + '/api/allies'
+    );
+  }//CLOSE getAllies
+
+
 
 }

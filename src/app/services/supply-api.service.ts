@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable()
 export class SupplyApiService {
 
-  constructor() { }
+  constructor(
+    private httpThang: HttpClient
+  ) { }
 
 }

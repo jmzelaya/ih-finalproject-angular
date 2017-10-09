@@ -22,7 +22,7 @@ export class PostApiService {
 
   postNewPost(postFields: PostInfo){
     return this.httpThang.post(
-      this.baseUrl + '/api/phones',
+      this.baseUrl + '/api/posts',
       postFields,
       { withCredentials: true }
     );
