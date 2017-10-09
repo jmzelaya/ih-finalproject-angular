@@ -15,6 +15,10 @@ import { UserPageComponent } from './pages/user-page/user-page.component';
 import { FriendPageComponent } from './pages/friend-page/friend-page.component';
 import { SuppliesComponent } from './pages/supplies/supplies.component';
 import { RecentSurvivorsComponent } from './pages/recent-survivors/recent-survivors.component';
+import { PostFormComponent } from './components/post-form/post-form.component';
+
+import { PostApiService } from './services/post-api.service';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +30,7 @@ import { RecentSurvivorsComponent } from './pages/recent-survivors/recent-surviv
     FriendPageComponent,
     SuppliesComponent,
     RecentSurvivorsComponent,
+    PostFormComponent,
 
   ],
   imports: [
@@ -37,7 +42,10 @@ import { RecentSurvivorsComponent } from './pages/recent-survivors/recent-surviv
       apiKey: 'AIzaSyA-Az-KWwgFia0wnW8YNa14evOIBojM3Fs'
     })
   ],
-  providers: [AuthApiService],
+  providers: [
+    AuthApiService,
+    PostApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
