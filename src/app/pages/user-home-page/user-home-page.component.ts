@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { AuthApiService } from '../../services/auth-api.service';
 import { PostApiService } from '../../services/post-api.service'
+import { PostInfo } from '../../interfaces/post-info';
 
 @Component({
   selector: 'app-user-home-page',
@@ -12,6 +13,10 @@ import { PostApiService } from '../../services/post-api.service'
 export class UserHomePageComponent implements OnInit {
 
   posts: any[] = [];
+
+  newPost: PostInfo = {
+    textContent: ''
+  };
 
   constructor(
     private routerThang : Router,

@@ -1,23 +1,18 @@
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
-<h2> USER-HOME PAGE TEST </h2>
+<div class="post-feed-wrapper">
+  <form (ngSubmit) = "saveNewPost()">
+    <label for="textContent"></label>
+    <input id="textContent" type="text" placeholder="How's the apocalypse today?"
+      name="postContent" [(ngModel)]="newPost.textContent"/>
 
-<div *ngFor= "let onePost of posts">
-  <p>
-    {{ onePost.textContent }}
-  </p>
+    <button> Post </button>
+  </form>
 
+  <div *ngFor= "let onePost of posts">
+    <div class="one-post">
+      <p>
+        {{ onePost.textContent }}
+      </p>
+    </div>
+
+  </div>
 </div>

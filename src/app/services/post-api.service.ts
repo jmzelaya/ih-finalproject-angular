@@ -18,7 +18,13 @@ export class PostApiService {
       this.baseUrl + '/api/myposts',
       {withCredentials: true}
     );
-  }
+  }//CLOSE getMyPosts()
 
-
-}
+  postNewPost(postFields: PostInfo){
+    return this.httpThang.post(
+      this.baseUrl + '/api/phones',
+      postFields,
+      { withCredentials: true }
+    );
+  }//close postNewPost()
+}//CLOSE class PostApiService
