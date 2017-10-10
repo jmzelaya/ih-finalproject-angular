@@ -17,6 +17,7 @@ import { UserHomePageComponent } from './pages/user-home-page/user-home-page.com
 import { AgmCoreModule } from '@agm/core';
 import { RecentSurvivorComponent } from './components/recent-survivor/recent-survivor.component';
 import { SupplyPageComponent } from './pages/supply-page/supply-page.component';
+import { MyAlliesComponent } from './pages/my-allies/my-allies.component';
 
 
 
@@ -28,6 +29,7 @@ import { SupplyPageComponent } from './pages/supply-page/supply-page.component';
     UserHomePageComponent,
     RecentSurvivorComponent,
     SupplyPageComponent,
+    MyAlliesComponent,
 
   ],
   imports: [

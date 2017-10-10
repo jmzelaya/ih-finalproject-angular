@@ -21,7 +21,7 @@ export class AllyApiService {
 
   // POST /api/users/allies/:allyId
     addAlly(allyId){
-      console.log(allyId);
+      // console.log(allyId);
       return this.httpThang.post(
         this.baseUrl + `/api/users/allies/${allyId}`,{},
         {withCredentials: true}
