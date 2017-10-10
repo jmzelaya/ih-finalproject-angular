@@ -1,45 +1,30 @@
-<!--
-    <header>
-      <nav>
-        <a routerLink="/"> Home </a>
-
-        <a routerLink="/login"> Log In </a>
-
-        <button (click) = "logMeOut()"> Log Out </button>
-      </nav>
-    </header> -->
-
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
-<div class="container-fluid">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" routerLink="/">Not Facebook :D</a>
-</div>
-<div id="navbar" class="navbar-collapse collapse">
-<ul class="nav navbar-nav navbar-right">
-<li><a routerLink="/">Home</a></li>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/">Not Facebook :D</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/login">Log In</a></li>
+        <li><a routerLink="/supplies">MarketPlace</a></li>
+        <li><a routerLink="/my-allies">My Allies</a></li>
 
+        <button (click) = "logMeOut()"> Log Out </button>
+      </ul>
 
-<li><a routerLink="/login">Log In</a></li>
-<li><a routerLink="/supplies">MarketPlace</a></li>
-<li><a routerLink="/my-allies">My Allies</a></li>
-
-<button (click) = "logMeOut()"> Log Out </button>
-
-
-
-</ul>
-<form class="navbar-form navbar-right">
-<input type="text" class="form-control" placeholder="Search...">
-</form>
-</div>
-</div>
+      <form class="navbar-form navbar-right">
+        <input type="text" class="form-control" placeholder="Search...">
+      </form>
+    </div>
+  </div>
 </nav>
 
 

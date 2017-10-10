@@ -46,7 +46,7 @@ export class UserHomePageComponent implements OnInit {
           console.log('New post success', fullPostDetails);
           this.posts.unshift(this.newPost);
           this.newPost = {
-            textContent: ''
+            textContent: '',
           };
         },
 

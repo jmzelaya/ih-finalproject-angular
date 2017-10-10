@@ -2,13 +2,13 @@
 
 
 <div class="recent-survivor">
-
-<ul>
-  <li *ngFor="let oneSurvivor of survivors">
-    <h4> {{ oneSurvivor.firstName }} {{ oneSurvivor.lastName }} </h4>
-    <a routerLink="/survivor-details">Details</a>
-    <button class="btn btn-success" (click) = "addAlly(oneSurvivor._id)"> Add Ally </button>
-  </li>
-</ul>
-
+  <ul>
+    <li *ngFor="let oneSurvivor of survivors">
+      <img src=""/>
+      <h4> {{ oneSurvivor.firstName }} {{ oneSurvivor.lastName }} </h4>
+      <p> {{oneSurvivor.createdAt}} </p>
+      <a routerLink="/survivor-details">Details</a>
+      <button class="btn btn-success" (click) = "addAlly(oneSurvivor._id)"> Add Ally </button>
+    </li>
+  </ul>
 </div>

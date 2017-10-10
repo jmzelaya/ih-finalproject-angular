@@ -34,7 +34,7 @@ export class SignUpComponent implements OnInit {
       .subscribe(
         (userInfo) => {
 
-          this.routerThang.navigate(['']);
+          this.routerThang.navigate(['user-home']);
         },
 
         (errInfo) => {
