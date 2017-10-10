@@ -14,7 +14,8 @@ export class AllyApiService {
   //GET   /api/my-allies
   getAllies() {
     return this.httpThang.get(
-      this.baseUrl + '/api/my-allies'
+      this.baseUrl + '/api/my-allies',
+      {withCredentials: true}
     );
   }//CLOSE getAllies
 

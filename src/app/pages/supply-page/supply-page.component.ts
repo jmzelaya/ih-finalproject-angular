@@ -32,7 +32,7 @@ export class SupplyPageComponent implements OnInit {
         (suppliesFromApi: any[]) => {
           this.supplies = suppliesFromApi;
         }
-      );//CLOSE this.postThang.getMyPosts()
+      );//CLOSE this.postThang.getSupplies()
     }
 
 

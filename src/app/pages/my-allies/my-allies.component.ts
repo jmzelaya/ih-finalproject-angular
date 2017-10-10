@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AllyApiService } from '../../services/ally-api.service'
+import { AllyApiService } from '../../services/ally-api.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-my-allies',
@@ -8,11 +9,20 @@ import { AllyApiService } from '../../services/ally-api.service'
 })
 export class MyAlliesComponent implements OnInit {
 
+  allies: any[] = [];
+
   constructor(
-    private allyThang: AllyApiService
+    private allyThang: AllyApiService,
+    private httpThang: HttpClient
   ) { }
 
   ngOnInit() {
+    this.allyThang.getAllies()
+      .subscribe(
+        (alliesFromApi: any[]) => {
+          this.allies = alliesFromApi;
+        }
+      );//CLOSE this.postThang.getAllies()
   }
 
 }
