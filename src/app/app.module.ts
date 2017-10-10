@@ -5,7 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AuthApiService } from './services/auth-api.service';
 import { PostApiService } from './services/post-api.service';
-
+import { AllyApiService } from './services/ally-api.service';
+import { SupplyApiService } from './services/supply-api.service'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,8 +15,8 @@ import { LogInComponent } from './pages/log-in/log-in.component';
 import { UserHomePageComponent } from './pages/user-home-page/user-home-page.component';
 
 import { AgmCoreModule } from '@agm/core';
-import { SuppliesComponent } from './pages/supplies/supplies.component';
 import { RecentSurvivorComponent } from './components/recent-survivor/recent-survivor.component';
+import { SupplyPageComponent } from './pages/supply-page/supply-page.component';
 
 
 
@@ -25,8 +26,8 @@ import { RecentSurvivorComponent } from './components/recent-survivor/recent-sur
     SignUpComponent,
     LogInComponent,
     UserHomePageComponent,
-    SuppliesComponent,
     RecentSurvivorComponent,
+    SupplyPageComponent,
 
   ],
   imports: [
@@ -40,7 +41,9 @@ import { RecentSurvivorComponent } from './components/recent-survivor/recent-sur
   ],
   providers: [
     AuthApiService,
-    PostApiService
+    PostApiService,
+    AllyApiService,
+    SupplyApiService
   ],
   bootstrap: [AppComponent]
 })

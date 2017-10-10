@@ -1,10 +1,14 @@
-<p>
-  recent-survivor works!
-</p>
+<h2> Recent Survivors </h2>
+
+
+<div class="recent-survivor">
 
 <ul>
   <li *ngFor="let oneSurvivor of survivors">
-    <h3> {{ oneSurvivor.firstName }} </h3>
-    <button> Add Ally </button>
+    <h4> {{ oneSurvivor.firstName }} {{ oneSurvivor.lastName }} {{oneSurvivor._id}} </h4>
+    <a routerLink="/survivor-details">Details</a>
+    <button class="btn btn-success" (click) = "addAlly(oneSurvivor._id)"> Add Ally </button>
   </li>
 </ul>
+
+</div>

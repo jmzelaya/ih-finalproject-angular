@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthApiService } from '../../services/auth-api.service';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
+import { AllyApiService } from '../../services/ally-api.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-recent-survivor',
@@ -15,7 +17,9 @@ export class RecentSurvivorComponent implements OnInit {
 
   constructor(
     private httpThang: HttpClient,
-    private authThang: AuthApiService
+    private authThang: AuthApiService,
+    private allyThang: AllyApiService,
+    private activatedThang: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -24,8 +28,22 @@ export class RecentSurvivorComponent implements OnInit {
           (survivorsFromApi: any[]) => {
             this.survivors = survivorsFromApi;
           }
-        );//CLOSE this.postThang.getMyPosts()
-
+        );//CLOSE subscribe() getRecentSurvivors()
   }//CLOSE ngOnInit()
+
+
+  addAlly(cow){
+        this.allyThang.addAlly(cow)
+          .subscribe(
+            (theAllyFromApi) => {
+                // ???
+                  console.log("success");
+            }
+
+          );
+
+  }//CLOSE addAlly()
+
+
 
 }

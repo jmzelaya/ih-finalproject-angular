@@ -39,7 +39,7 @@ export class UserHomePageComponent implements OnInit {
   }//CLOSE ngOnInit()
 
   receiveCow() {
-    //call servide
+    //call service
     this.postThang.postNewPost(this.newPost)
       .subscribe(
         (fullPostDetails) => {

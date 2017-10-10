@@ -1,25 +1,34 @@
-<div class="post-feed-wrapper">
-  <form (ngSubmit) = "receiveCow()">
-    <label for="textContent"></label>
-    <input id="textContent" type="text" placeholder="How's the apocalypse today?"
-      name="postContent" [(ngModel)]="newPost.textContent"/>
 
-    <button> Post </button>
-  </form>
+<div class="row">
+  <div class="col-sm-8">
+    <div class="post-feed-wrapper well form-group">
+
+        <form (ngSubmit) = "receiveCow()">
+          <label for="textContent"></label>
+          <input id="textContent" type="text" placeholder="How's the apocalypse today?"
+            class="form-control" name="postContent" [(ngModel)]="newPost.textContent"/>
+
+          <button class="btn btn-success"> Post </button>
+
+        </form>
+    </div>
+  </div>
+</div>
+
 
 
     <div class="row">
       <div class="col-sm-8">
         <div *ngFor= "let onePost of posts">
-          <div class="one-post">
+          <div class= well>
+          
             <p>
               {{ onePost.textContent }}
             </p>
           </div>
         </div>
-        <div class="col-sm-4">
-          <app-recent-survivor></app-recent-survivor>
-        </div>
+      </div>
+      <div class="col-sm-4">
+        <app-recent-survivor></app-recent-survivor>
       </div>
     </div>
-  </div>

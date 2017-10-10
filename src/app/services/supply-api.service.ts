@@ -12,12 +12,14 @@ export class SupplyApiService {
     private httpThang: HttpClient
   ) { }
 
+  //GET           /api/supplies
   getSupplies(){
     return this.httpThang.get(
       this.baseUrl + '/api/supplies'
     )
   }//CLOSE getSupplies()
 
+  //POST        /api/supplies
   postSupply(supplyFields: SupplyInfo){
     return this.httpThang.post(
       this.baseUrl + '/api/supplies',

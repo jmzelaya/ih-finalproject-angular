@@ -1,0 +1,17 @@
+.recent-survivor{
+  border: 1px solid black
+}
+
+ul{
+  margin: 0px;
+  padding: 0px;
+}
+
+li{
+  border: 1px solid black;
+  border-radius: 3px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+
+}

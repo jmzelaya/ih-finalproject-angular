@@ -6,6 +6,7 @@ export class AllyApiService {
 
   baseUrl: string = 'http://localhost:3000';
 
+
   constructor(
     private httpThang: HttpClient
   ) { }
@@ -18,5 +19,13 @@ export class AllyApiService {
   }//CLOSE getAllies
 
 
+  // POST /api/users/allies/:allyId
+    addAlly(allyId){
+      console.log(allyId);
+      return this.httpThang.post(
+        this.baseUrl + `/api/users/allies/${allyId}`,{},
+        {withCredentials: true}
+      );
+    }//close addAlly()
 
 }
