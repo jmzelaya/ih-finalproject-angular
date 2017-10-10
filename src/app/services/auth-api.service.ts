@@ -50,4 +50,10 @@ export class AuthApiService {
     )
   }
 
+
+  getSurvivorDetails(userId: string){
+    return this.httpThang.get(
+      this.baseUrl + '/api/users/' + userId
+    )
+  }
 }//CLOSE class AuthApiService{}

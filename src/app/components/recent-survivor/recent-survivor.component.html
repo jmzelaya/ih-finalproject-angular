@@ -5,7 +5,7 @@
 
 <ul>
   <li *ngFor="let oneSurvivor of survivors">
-    <h4> {{ oneSurvivor.firstName }} {{ oneSurvivor.lastName }} {{oneSurvivor._id}} </h4>
+    <h4> {{ oneSurvivor.firstName }} {{ oneSurvivor.lastName }} </h4>
     <a routerLink="/survivor-details">Details</a>
     <button class="btn btn-success" (click) = "addAlly(oneSurvivor._id)"> Add Ally </button>
   </li>

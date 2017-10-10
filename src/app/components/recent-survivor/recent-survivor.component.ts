@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { AllyApiService } from '../../services/ally-api.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-recent-survivor',
   templateUrl: './recent-survivor.component.html',
@@ -36,7 +37,6 @@ export class RecentSurvivorComponent implements OnInit {
         this.allyThang.addAlly(cow)
           .subscribe(
             (theAllyFromApi) => {
-                // ???
                   console.log("success");
             }
 
@@ -44,6 +44,17 @@ export class RecentSurvivorComponent implements OnInit {
 
   }//CLOSE addAlly()
 
+  // this.activatedThang.params
+  // .subscribe(
+  //   (myParams) => {
+  //       this.phoneThang.getPhoneDetails(myParams.phoneId)
+  //         .subscribe(
+  //           (thePhoneFromApi) => {
+  //             this.phoneInfo = thePhoneFromApi;
+  //           }
+  //         );
+  //   });
+  //
 
 
 }
