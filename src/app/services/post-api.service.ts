@@ -27,5 +27,14 @@ export class PostApiService {
       postFields,
       { withCredentials: true }
     );
-  }//close postNewPost()
+  }//CLOSE postNewPost()
+
+  //GET /api/posts/ally
+  getAlliesPosts() {
+    return this.httpThang.get(
+      this.baseUrl + '/api/posts/ally',
+      {withCredentials: true}
+    )
+  }//CLOSE getAlliesPosts()
+
 }//CLOSE class PostApiService

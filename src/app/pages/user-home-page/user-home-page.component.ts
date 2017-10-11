@@ -38,6 +38,13 @@ export class UserHomePageComponent implements OnInit {
           this.posts = postsFromApi;
         }
       );//CLOSE this.postThang.getMyPosts()
+
+    this.postThang.getAlliesPosts()
+      .subscribe(
+        (allyPostsFromApi: any[]) => {
+          this.posts = allyPostsFromApi;
+        }
+      )
   }//CLOSE ngOnInit()
 
   receiveCow() { //should probably make this not "receiveCow() :D"
@@ -64,8 +71,8 @@ export class UserHomePageComponent implements OnInit {
           console.log('New Phone Error', errorInfo)
         }
       )
-  }
+  }//CLOSE receiveCow()
 
 
 
-}
+}//CLOSE class UserHomePageComponent
