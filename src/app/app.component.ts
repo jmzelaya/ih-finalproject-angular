@@ -38,14 +38,19 @@ export class AppComponent {
   ) {  }
 
   ngOnInit() {
-      this.authThang.getLoginStatus()
+      this.authThang.getLoginStatus();
+
+      this.authThang.loginStatusNotifier
         .subscribe(
           (loggedInInfo: any) => {
-            if (loggedInInfo.isLoggedIn){
-              this.userInfo = loggedInInfo.userInfo;
-            }
+            if (loggedInInfo.isLoggedIn) {
+            this.userInfo = loggedInInfo.userInfo;
           }
-        )
+          else {
+            this.userInfo = null;
+          }
+        }
+      );
   }//CLOSE ngOnInit(...)
 
   logMeOut() {

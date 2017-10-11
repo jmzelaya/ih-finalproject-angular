@@ -29,7 +29,7 @@ export class AuthApiService {
               this.baseUrl + '/api/process-signup',
               userInfo,
               { withCredentials: true }
-          ) // need "withCredentials" for APIs that use the session
+          ) 
           .do((userInfo) => {
               this.loginStatusSubject.next({
                   isLoggedIn: true,
@@ -46,7 +46,7 @@ export class AuthApiService {
               this.baseUrl + '/api/process-login',
               loginCredentials,
               { withCredentials: true }
-          ) // need "withCredentials" for APIs that use the session
+          )
           .do((userInfo) => {
               this.loginStatusSubject.next({
                   isLoggedIn: true,
@@ -62,7 +62,7 @@ export class AuthApiService {
           this.httpThang.delete(
               this.baseUrl + '/api/logout',
               { withCredentials: true }
-          ) // need "withCredentials" for APIs that use the session
+          )
           .do(() => {
               this.loginStatusSubject.next({ isLoggedIn: false })
           })

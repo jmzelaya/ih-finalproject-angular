@@ -16,6 +16,10 @@
         <li><a routerLink="/my-allies">My Allies</a></li>
         <li><a routerLink="/supplies">MarketPlace</a></li>
 
+        <form class="navbar-form navbar-right">
+          <input type="text" class="form-control" placeholder="Search...">
+        </form>
+
         <button (click) = "logMeOut()"> Log Out </button>
       </ul>
 
@@ -25,15 +29,11 @@
         </div>
 
 
-
-      <form class="navbar-form navbar-right">
-        <input type="text" class="form-control" placeholder="Search...">
-      </form>
     </div>
   </div>
 </nav>
 
-<agm-map
+<!-- <agm-map
 [latitude]="lat"
 [longitude]="lng"
 [zoom] = "zoom"
@@ -49,6 +49,6 @@
   (dragEnd)="markerDragEnd(m, $event)"
   >
 </agm-marker>
-</agm-map>
+</agm-map> -->
 
 <router-outlet></router-outlet>
