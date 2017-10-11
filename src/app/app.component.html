@@ -18,7 +18,13 @@
 
         <button (click) = "logMeOut()"> Log Out </button>
       </ul>
-      <h4><a routerLink="/login">Log In</a></h4>
+
+
+        <div *ngIf="!userInfo">
+            <h4><a routerLink="/login">Log In</a></h4>
+        </div>
+
+
 
       <form class="navbar-form navbar-right">
         <input type="text" class="form-control" placeholder="Search...">
