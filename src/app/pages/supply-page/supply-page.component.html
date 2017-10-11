@@ -11,7 +11,7 @@
         <input id="productDescription" type="text" placeholder="e.g. Rich, luxorious lather"
           class="form-control" name="productDescription" [(ngModel)]="newSupply.productDescription"/>
 
-        <label for="productValue"> What are you looking for?</label>
+        <label for="productValue"> What do you want in return?</label>
         <input id="productValue" type="text" placeholder="e.g. Seeking canned beans"
           class="form-control" name="supplyValue" [(ngModel)]="newSupply.productValue"/>
 
@@ -30,7 +30,7 @@
     <div class="supply">
       <h3> {{ oneSupply.productName }}</h3>
       <p> {{ oneSupply.productValue }} </p>
-      <a routerLink="['/supplies', supply._id]">Details</a>
+      <a [routerLink] = "['/supplies', oneSupply._id]">Details</a>
     </div>
   </li>
 </ul>

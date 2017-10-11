@@ -18,6 +18,8 @@ export class UserHomePageComponent implements OnInit {
 
   allyPosts = [];
 
+  userInfo: any;
+
   newPost: PostInfo = {
     textContent: '',
     author: ''
@@ -41,6 +43,14 @@ export class UserHomePageComponent implements OnInit {
         }
       );//CLOSE this.postThang.getMyPosts()
 
+    this.authThang.getLoginStatus()
+      .subscribe(
+        (loggedInInfo: any) => {
+            if (loggedInInfo.isLoggedIn){
+                this.userInfo = loggedInInfo.userInfo;
+            }
+        }//close get loginstatus
+    )
 
   }//CLOSE ngOnInit()
 

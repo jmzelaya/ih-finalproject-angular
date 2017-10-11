@@ -23,6 +23,8 @@ export class MyAlliesComponent implements OnInit {
           this.allies = alliesFromApi;
         }
       );//CLOSE this.postThang.getAllies()
-  }
+
+
+  }//CLOSE ngOnInit
 
 }
