@@ -14,6 +14,8 @@ export class AppComponent {
   lat: number = 51.678228;
   lng: number = 7.229007;
 
+
+
   //Markers
   markers: marker[] = [
     {
@@ -26,6 +28,8 @@ export class AppComponent {
 
   userInfo: any;
 
+
+
   title = 'app';
 
   constructor(
@@ -34,8 +38,15 @@ export class AppComponent {
   ) {  }
 
   ngOnInit() {
-
-  }
+      this.authThang.getLoginStatus()
+        .subscribe(
+          (loggedInInfo: any) => {
+            if (loggedInInfo.isLoggedIn){
+              this.userInfo = loggedInInfo.userInfo;
+            }
+          }
+        )
+  }//CLOSE ngOnInit(...)
 
   logMeOut() {
     this.authThang.logOut()

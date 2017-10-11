@@ -1,3 +1,7 @@
 .home-page{
   margin: 70px;
 }
+
+li{
+  list-style: none;
+}
