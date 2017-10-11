@@ -14,6 +14,8 @@ export class SupplyPageComponent implements OnInit {
 
   supplies: any[] = [];
 
+  errorMessage: string;
+
   newSupply: SupplyInfo = {
     productName: '',
     productDescription: '',
@@ -35,6 +37,33 @@ export class SupplyPageComponent implements OnInit {
       );//CLOSE this.postThang.getSupplies()
     }
 
-    
+    submitSupply() { //should probably make this not "receiveCow() :D"
+      //call service
+      this.supplyThang.submitSupply(this.newSupply)
+        .subscribe(
+          (fullSupplyDetails) => {
+            console.log('New supply success', fullSupplyDetails);
+            this.supplies.unshift(fullSupplyDetails);
+            this.newSupply = {
+              productName: '',
+              productDescription: '',
+              productValue: '',
+              tag: ''
+            };
+          },
+
+          (errorInfo) => {
+            if(errorInfo.status === 400) {
+              this.errorMessage = 'Validation error'
+            }
+
+            else {
+              this.errorMessage = 'Unknown error. Try again later'
+            }
+            console.log('New Phone Error', errorInfo)
+          }
+        )
+    }//CLOSE receiveCow()
+
 
 }//CLOSE class SupplyPageComponent

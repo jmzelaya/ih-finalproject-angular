@@ -20,10 +20,11 @@ export class SupplyApiService {
   }//CLOSE getSupplies()
 
   //POST        /api/supplies
-  postSupply(supplyFields: SupplyInfo){
+  submitSupply(supplyFields: SupplyInfo){
     return this.httpThang.post(
       this.baseUrl + '/api/supplies',
-      supplyFields
+      supplyFields,
+      {withCredentials: true}
     );
   }//CLOSE postSupply()
 

@@ -2,7 +2,7 @@
   <div class="col-sm-8">
     <div class="post-feed-wrapper well form-group">
 
-        <form>
+        <form (ngSubmit)="submitSupply()">
           <label for="productName"> What is the supply?</label>
           <input id="productName" type="text" placeholder="e.g. Shampoo"
             class="form-control" name="supplyName" [(ngModel)]="newSupply.productName"/>
@@ -30,7 +30,7 @@
     <div class="supply">
       <h3> {{ oneSupply.productName }}</h3>
       <p> {{ oneSupply.productValue }} </p>
-      <a routerLink="['/supplies', oneSupply._id]">Details</a>
+      <a routerLink="['/supplies', supply._id]">Details</a>
     </div>
   </li>
 </ul>
