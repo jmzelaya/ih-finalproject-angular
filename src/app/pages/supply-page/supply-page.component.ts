@@ -35,5 +35,6 @@ export class SupplyPageComponent implements OnInit {
       );//CLOSE this.postThang.getSupplies()
     }
 
+    
 
 }//CLOSE class SupplyPageComponent

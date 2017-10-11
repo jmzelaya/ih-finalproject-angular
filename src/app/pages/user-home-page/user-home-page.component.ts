@@ -16,6 +16,8 @@ export class UserHomePageComponent implements OnInit {
 
   posts: any[] = [];
 
+  allyPosts = [];
+
   newPost: PostInfo = {
     textContent: '',
     author: ''
