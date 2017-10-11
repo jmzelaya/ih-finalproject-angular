@@ -13,3 +13,8 @@
 body{
   font-family: futura;
 }
+
+agm-map {
+  height: 250px;
+  width: 250px;
+}
