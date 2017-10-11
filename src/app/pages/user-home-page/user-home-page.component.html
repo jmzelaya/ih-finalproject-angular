@@ -1,17 +1,21 @@
   <div class="row">
     <div class="col-sm-9 left">
+      <h2> Your Wall </h2>
       <div class="post-feed-wrapper well form-group">
 
           <form class="post-form"(ngSubmit) = "receiveCow()">
-            <label for="textContent"></label>
             <input id="textContent" type="text" placeholder="How's the apocalypse today?"
               class="form-control" name="postContent" [(ngModel)]="newPost.textContent"/>
 
-            <button class="submit btn"> Submit Post </button>
+              <hr />
+            <button class="submit btn pull-right"> Submit Post </button>
 
           </form>
 
-          <button class="upload btn"> Upload Image </button>
+          <button class="upload btn pull-left"> Upload Image </button>
+          <div class="clearfix">
+
+          </div>
       </div>
       <h2> Recent Posts </h2>
       <div *ngFor= "let onePost of posts">
