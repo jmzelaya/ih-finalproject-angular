@@ -1,3 +1,4 @@
 export interface PostInfo {
-  textContent: string
+  textContent: string,
+  author: string
 }

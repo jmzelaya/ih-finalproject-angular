@@ -17,7 +17,8 @@ export class UserHomePageComponent implements OnInit {
   posts: any[] = [];
 
   newPost: PostInfo = {
-    textContent: ''
+    textContent: '',
+    author: ''
   };
 
   errorMessage: string;
@@ -39,7 +40,7 @@ export class UserHomePageComponent implements OnInit {
       );//CLOSE this.postThang.getMyPosts()
   }//CLOSE ngOnInit()
 
-  receiveCow() {
+  receiveCow() { //should probably make this not "receiveCow() :D"
     //call service
     this.postThang.postNewPost(this.newPost)
       .subscribe(
@@ -48,6 +49,7 @@ export class UserHomePageComponent implements OnInit {
           this.posts.unshift(this.newPost);
           this.newPost = {
             textContent: '',
+            author: ''
           };
         },
 

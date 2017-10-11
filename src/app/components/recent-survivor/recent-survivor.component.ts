@@ -44,17 +44,5 @@ export class RecentSurvivorComponent implements OnInit {
 
   }//CLOSE addAlly()
 
-  // this.activatedThang.params
-  // .subscribe(
-  //   (myParams) => {
-  //       this.phoneThang.getPhoneDetails(myParams.phoneId)
-  //         .subscribe(
-  //           (thePhoneFromApi) => {
-  //             this.phoneInfo = thePhoneFromApi;
-  //           }
-  //         );
-  //   });
-  //
-
 
 }
