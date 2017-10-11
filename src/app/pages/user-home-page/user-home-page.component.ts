@@ -5,6 +5,7 @@ import { AuthApiService } from '../../services/auth-api.service';
 import { PostApiService } from '../../services/post-api.service'
 import { PostInfo } from '../../interfaces/post-info';
 import { RecentSurvivorComponent } from '../../components/recent-survivor/recent-survivor.component';
+import { AllyApiService } from '../../services/ally-api.service'
 
 @Component({
   selector: 'app-user-home-page',
