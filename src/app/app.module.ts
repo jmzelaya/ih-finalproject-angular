@@ -39,9 +39,7 @@ import { SupplyDetailComponent } from './pages/supply-detail/supply-detail.compo
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyA-Az-KWwgFia0wnW8YNa14evOIBojM3Fs'
-    })
+
   ],
   providers: [
     AuthApiService,
