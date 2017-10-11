@@ -19,6 +19,7 @@ import { RecentSurvivorComponent } from './components/recent-survivor/recent-sur
 import { SupplyPageComponent } from './pages/supply-page/supply-page.component';
 import { MyAlliesComponent } from './pages/my-allies/my-allies.component';
 import { SupplyDetailComponent } from './pages/supply-detail/supply-detail.component';
+import { UserDetailComponent } from './pages/user-detail/user-detail.component';
 
 
 
@@ -32,6 +33,7 @@ import { SupplyDetailComponent } from './pages/supply-detail/supply-detail.compo
     SupplyPageComponent,
     MyAlliesComponent,
     SupplyDetailComponent,
+    UserDetailComponent,
 
   ],
   imports: [

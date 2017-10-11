@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AllyApiService } from '../../services/ally-api.service';
 import { HttpClient } from '@angular/common/http';
+import { AuthApiService } from '../../services/auth-api.service';
 
 @Component({
   selector: 'app-my-allies',
@@ -13,7 +14,8 @@ export class MyAlliesComponent implements OnInit {
 
   constructor(
     private allyThang: AllyApiService,
-    private httpThang: HttpClient
+    private httpThang: HttpClient,
+    private authThang: AuthApiService
   ) { }
 
   ngOnInit() {
@@ -24,6 +26,7 @@ export class MyAlliesComponent implements OnInit {
         }
       );//CLOSE this.postThang.getAllies()
 
+      
 
   }//CLOSE ngOnInit
 

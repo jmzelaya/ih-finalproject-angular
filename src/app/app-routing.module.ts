@@ -6,7 +6,7 @@ import { UserHomePageComponent } from './pages/user-home-page/user-home-page.com
 import { SupplyPageComponent } from './pages/supply-page/supply-page.component';
 import { MyAlliesComponent } from './pages/my-allies/my-allies.component';
 import { SupplyDetailComponent } from './pages/supply-detail/supply-detail.component';
-
+import { UserDetailComponent } from './pages/user-detail/user-detail.component';
 
 
 const routes: Routes = [
@@ -16,6 +16,7 @@ const routes: Routes = [
   {path: 'supplies', component: SupplyPageComponent},
   {path: 'supplies/:supplyId', component: SupplyDetailComponent},
   {path: 'my-allies', component: MyAlliesComponent},
+  {path: 'my-allies/:userId', component: UserDetailComponent},
   {path: '**', component: SignUpComponent}
 ];
 
