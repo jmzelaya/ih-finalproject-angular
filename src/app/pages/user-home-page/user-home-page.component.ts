@@ -52,16 +52,18 @@ export class UserHomePageComponent implements OnInit {
         }//close get loginstatus
     )
 
-  }//CLOSE ngOnInit()
-
-  updateFeed() {
     this.postThang.getAlliesPosts()
       .subscribe(
         (allyPostsFromApi: any[]) => {
           this.posts = allyPostsFromApi;
         }
       );
-  }
+
+
+  }//CLOSE ngOnInit()
+
+
+
 
   receiveCow() { //should probably make this not "receiveCow() :D"
     //call service
