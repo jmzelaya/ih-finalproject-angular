@@ -14,7 +14,7 @@ export class RecentSurvivorComponent implements OnInit {
 
   baseUrl: string = 'http://localhost:3000'
 
-  survivors: any = {};
+  survivors: any = [];
 
   constructor(
     private httpThang: HttpClient,
