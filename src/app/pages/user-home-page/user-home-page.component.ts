@@ -55,7 +55,7 @@ export class UserHomePageComponent implements OnInit {
       .subscribe(
         (fullPostDetails) => {
           console.log('New post success', fullPostDetails);
-          this.posts.unshift(this.newPost);
+          this.posts.unshift(fullPostDetails);
           this.newPost = {
             textContent: '',
             author: ''
