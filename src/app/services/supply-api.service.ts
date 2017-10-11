@@ -28,4 +28,10 @@ export class SupplyApiService {
     );
   }//CLOSE postSupply()
 
+  getSupplyDetails(supplyId: string){
+    return this.httpThang.get(
+      this.baseUrl + '/api/supplies/' + supplyId
+    );
+  }
+
 }

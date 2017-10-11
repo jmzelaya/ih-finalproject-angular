@@ -35,7 +35,7 @@ export class SupplyPageComponent implements OnInit {
           this.supplies = suppliesFromApi;
         }
       );//CLOSE this.postThang.getSupplies()
-    }
+    }//CLOSE ngOnInit()
 
     submitSupply() { //should probably make this not "receiveCow() :D"
       //call service
