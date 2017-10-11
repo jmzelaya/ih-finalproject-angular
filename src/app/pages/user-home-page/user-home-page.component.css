@@ -5,9 +5,24 @@
 
 input{
   width: 300px;
-  padding: 20px;
+  padding: 60px 10px;
+  width: 100%;
+
 }
 
 button{
   float: right;
+}
+
+.user-form{
+
+}
+
+.btn {
+  background-color: #ae6554;
+  color: white;
+}
+
+.btn {
+  background-color: #b4a1a7
 }

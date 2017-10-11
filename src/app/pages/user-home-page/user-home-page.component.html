@@ -1,35 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-7">
+      <div class="post-feed-wrapper well form-group">
 
-<div class="row">
-  <div class="col-sm-8">
-    <div class="post-feed-wrapper well form-group">
+          <form class="post-form"(ngSubmit) = "receiveCow()">
+            <label for="textContent"></label>
+            <input id="textContent" type="text" placeholder="How's the apocalypse today?"
+              class="form-control" name="postContent" [(ngModel)]="newPost.textContent"/>
 
-        <form (ngSubmit) = "receiveCow()">
-          <label for="textContent"></label>
-          <input id="textContent" type="text" placeholder="How's the apocalypse today?"
-            class="form-control" name="postContent" [(ngModel)]="newPost.textContent"/>
+            <button class="btn"> Submit Post </button>
 
-          <button class="btn btn-success"> Post </button>
+          </form>
 
-        </form>
+          <button class="btn"> Upload Image </button>
+      </div>
     </div>
   </div>
 </div>
 
 
 
-    <div class="row">
-      <div class="col-sm-8">
-        <div *ngFor= "let onePost of posts">
-          <div class= well>
-            <h4> {{ onePost.author.firstName }} {{ onePost.author.lastName }}</h4>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-7">
+      <div *ngFor= "let onePost of posts">
+        <div class= well>
+          <h4> {{ onePost.author.firstName }} {{ onePost.author.lastName }}</h4>
 
-            <p>
-              {{ onePost.textContent }}
-            </p>
-          </div>
+          <p>
+            {{ onePost.textContent }}
+          </p>
         </div>
       </div>
-      <div class="col-sm-4">
-        <app-recent-survivor></app-recent-survivor>
-      </div>
     </div>
+    <div class="col-sm-4">
+      <app-recent-survivor></app-recent-survivor>
+    </div>
+  </div>
+</div>

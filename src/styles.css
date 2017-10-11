@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+.well{
+  background-color: #eee7d6;
+  border-radius: 0px;
+  box-shadow: none;
+  border: none;
+}
+
+.container-fluid{
+  background-color: #3f4e56;
+}
+
+body{
+  font-family: futura;
+}
