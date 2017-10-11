@@ -18,6 +18,7 @@ import { AgmCoreModule } from '@agm/core';
 import { RecentSurvivorComponent } from './components/recent-survivor/recent-survivor.component';
 import { SupplyPageComponent } from './pages/supply-page/supply-page.component';
 import { MyAlliesComponent } from './pages/my-allies/my-allies.component';
+import { SupplyDetailComponent } from './pages/supply-detail/supply-detail.component';
 
 
 
@@ -30,6 +31,7 @@ import { MyAlliesComponent } from './pages/my-allies/my-allies.component';
     RecentSurvivorComponent,
     SupplyPageComponent,
     MyAlliesComponent,
+    SupplyDetailComponent,
 
   ],
   imports: [
