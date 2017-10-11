@@ -1,12 +1,11 @@
 .post-feed-wrapper{
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 
 input{
-  width: 300px;
-  padding: 60px 10px;
-  width: 100%;
+
+  padding: 30px 0px 70px 20px
 
 }
 
@@ -18,11 +17,23 @@ button{
 
 }
 
-.btn {
+.submit {
   background-color: #ae6554;
   color: white;
 }
 
-.btn {
-  background-color: #b4a1a7
+.upload {
+  background-color: #b4a1a7;
+}
+
+.left{
+  padding: 60px;
+}
+
+.row{
+  margin: 0px;
+}
+
+.right{
+  padding: 0px;
 }

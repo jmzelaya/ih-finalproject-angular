@@ -1,6 +1,5 @@
-<div class="container">
   <div class="row">
-    <div class="col-sm-7">
+    <div class="col-sm-9 left">
       <div class="post-feed-wrapper well form-group">
 
           <form class="post-form"(ngSubmit) = "receiveCow()">
@@ -8,23 +7,15 @@
             <input id="textContent" type="text" placeholder="How's the apocalypse today?"
               class="form-control" name="postContent" [(ngModel)]="newPost.textContent"/>
 
-            <button class="btn"> Submit Post </button>
+            <button class="submit btn"> Submit Post </button>
 
           </form>
 
-          <button class="btn"> Upload Image </button>
+          <button class="upload btn"> Upload Image </button>
       </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-7">
+      <h2> Recent Posts </h2>
       <div *ngFor= "let onePost of posts">
-        <div class= well>
+        <div class= "well">
           <h4> {{ onePost.author.firstName }} {{ onePost.author.lastName }}</h4>
 
           <p>
@@ -33,8 +24,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-3 right">
       <app-recent-survivor></app-recent-survivor>
     </div>
   </div>
-</div>
