@@ -3,7 +3,7 @@ import { AuthApiService } from '../../services/auth-api.service';
 import { HttpClient } from '@angular/common/http';
 import { AllyApiService } from '../../services/ally-api.service';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-recent-survivor',

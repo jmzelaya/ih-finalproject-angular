@@ -6,7 +6,7 @@
     <li *ngFor="let oneSurvivor of survivors">
       <img src=""/>
       <h4> {{ oneSurvivor.firstName }} {{ oneSurvivor.lastName }} </h4>
-      <p> {{oneSurvivor.createdAt}} </p>
+      <p> Joined: {{oneSurvivor.createdAt | date:'mediumDate' }} </p>
       <a routerLink="/survivor-details">Details</a>
       <button class="btn btn-success" (click) = "addAlly(oneSurvivor._id)"> Add Ally </button>
     </li>
