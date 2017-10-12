@@ -51,6 +51,15 @@ export class UserHomePageComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.authThang.getLoginStatus()
+    .subscribe(
+      (loggedInInfo: any) => {
+        if (loggedInInfo.isLoggedIn){
+          this.userInfo = loggedInInfo.userInfo;
+        }
+      }//close get loginstatus
+    )
+    
     this.postThang.getMyPosts()
       .subscribe(
         (postsFromApi: any[]) => {
@@ -58,14 +67,6 @@ export class UserHomePageComponent implements OnInit {
         }
       );//CLOSE this.postThang.getMyPosts()
 
-    this.authThang.getLoginStatus()
-      .subscribe(
-        (loggedInInfo: any) => {
-            if (loggedInInfo.isLoggedIn){
-                this.userInfo = loggedInInfo.userInfo;
-            }
-        }//close get loginstatus
-    )
 
     this.postThang.getAlliesPosts()
       .subscribe(

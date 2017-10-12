@@ -36,7 +36,12 @@ export class AuthApiService {
                   isLoggedIn: true,
                   userInfo: userInfo
               });
+
+                        console.log('user info -->', userInfo);
+
+                        console.log(this.loginStatusSubject);
           })
+
         ); // return (
     } // postSignup()
 
