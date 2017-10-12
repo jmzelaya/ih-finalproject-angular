@@ -79,12 +79,10 @@ export class UserHomePageComponent implements OnInit {
 
 
   receiveCow(){
-      // if there images to upload, save phone with image.
     if (this.myUploader.getNotUploadedItems().length > 0) {
         this.savePhoneWithImage();
     }
 
-    // otherwise there are NO images to upload, do regular AJAX.
     else {
         this.savePhoneNoImage();
     }
@@ -98,7 +96,7 @@ export class UserHomePageComponent implements OnInit {
       this.myUploader.onSuccessItem = (item, response) => {
           const fullPostDetails = JSON.parse(response);
           console.log('New post success', fullPostDetails);
-
+          this.posts.unshift(fullPostDetails);
           this.errorMessage = '';
           this.newPost = {
             textContent: '',
@@ -111,19 +109,17 @@ export class UserHomePageComponent implements OnInit {
           console.log('New post error', response);
 
           this.errorMessage = 'Unknown error. Try again later.'
-      }; // onErrorItem
+      };
 
-      // START the AJAX request
       this.myUploader.uploadAll();
-  } // savePhoneWithImage()
+  }
 
   savePhoneNoImage() {
-      // send "this.newPOst to the backend for saving
       this.postThang.postNewPost(this.newPost)
         .subscribe(
-          // SUCCESS! (1st argument of "subscribe()")
           (fullPostDetails) => {
               console.log('New phone success', fullPostDetails);
+               this.posts.unshift(fullPostDetails);
 
 
               this.errorMessage = '';
@@ -134,7 +130,6 @@ export class UserHomePageComponent implements OnInit {
               };
           },
 
-          // ERROR! (2nd argument of "subscribe()")
           (errorInfo) => {
               console.log('New phone error', errorInfo);
 
@@ -145,8 +140,8 @@ export class UserHomePageComponent implements OnInit {
                   this.errorMessage = 'Unknown error. Try again later.'
               }
           }
-        ); // .subscribe()
-  } // savePhoneNoImage()
+        );
+  }
 
 
   // receiveCow() { //should probably make this not "receiveCow() :D"
