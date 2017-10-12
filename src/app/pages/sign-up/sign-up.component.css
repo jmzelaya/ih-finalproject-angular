@@ -16,7 +16,7 @@
 
 .layer-three {
   position: absolute;
-  bottom: 96px;
+  bottom: 108px;
   width: 100%;
   display: block;
 
@@ -30,7 +30,7 @@
 }
 .layer-two {
   position: absolute;
-  bottom: 60px;
+  bottom: 72px;
   width: 100%;
   display: block;
 
@@ -44,7 +44,7 @@
 }
 .layer-one {
   position: absolute;
-  bottom: 0px;
+  bottom: 17px;
   width: 100%;
   display: block;
 
