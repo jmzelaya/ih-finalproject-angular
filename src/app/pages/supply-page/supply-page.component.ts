@@ -20,7 +20,6 @@ export class SupplyPageComponent implements OnInit {
     productName: '',
     productDescription: '',
     productValue: '',
-    tag: ''
   }
 
   constructor(
@@ -48,7 +47,6 @@ export class SupplyPageComponent implements OnInit {
               productName: '',
               productDescription: '',
               productValue: '',
-              tag: ''
             };
           },
 

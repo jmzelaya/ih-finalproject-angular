@@ -23,7 +23,6 @@ export class SupplyDetailComponent implements OnInit {
     productName: '',
     productDescription: '',
     productValue: '',
-    tag: ''
   }
 
   constructor(
