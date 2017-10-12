@@ -1,5 +1,8 @@
 <div class="log-in">
 
+  <p class="error" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </p>
 
   <form (ngSubmit) ="loginSubmit()">
 

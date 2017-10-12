@@ -39,11 +39,11 @@ export class LogInComponent implements OnInit {
 
         (errInfo) => {
           if(errInfo.status === 401) {
-            this.loginError = 'Bad credentials'
+            this.errorMessage = 'Bad credentials'
           }
 
           else{
-            this.loginError = 'Something went wrong, please try agian.'
+            this.errorMessage = 'Something went wrong, please try agian.'
           }
         }
       )

@@ -1,3 +1,7 @@
+<p class="error" *ngIf="errorMessage">
+  {{ errorMessage }}
+</p>
+
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -8,7 +12,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" routerLink="/">ZURVIVE</a>
+      <a class="navbar-brand" routerLink="/"><img class="logo" src="/assets/logo.png"/></a>
 
     </div>
     <div class="pull-right" *ngIf="!userInfo">
