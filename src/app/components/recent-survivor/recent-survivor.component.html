@@ -4,11 +4,11 @@
 <div class="recent-survivor">
   <ul>
     <li *ngFor="let oneSurvivor of survivors">
-
-      <h4> {{ oneSurvivor.firstName }} {{ oneSurvivor.lastName }} </h4>
-      <p> Joined: {{oneSurvivor.createdAt | date:'mediumDate' }} </p>
+      <img class="pull-left user-icon" src="/assets/user-icon.png"/>
+      <p> {{ oneSurvivor.firstName }} {{ oneSurvivor.lastName }} <br /> Joined: {{oneSurvivor.createdAt | date:'mediumDate' }}</p>
       <!-- <a routerLink="/survivor-details">Details</a> -->
-      <button class="btn" (click) = "addAlly(oneSurvivor._id)"> Add Ally </button>
+      <button class="btn pull-right" (click) = "addAlly(oneSurvivor._id)"> Add Ally </button>
+      <hr />
     </li>
   </ul>
 </div>
