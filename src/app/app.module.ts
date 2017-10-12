@@ -20,7 +20,7 @@ import { SupplyPageComponent } from './pages/supply-page/supply-page.component';
 import { MyAlliesComponent } from './pages/my-allies/my-allies.component';
 import { SupplyDetailComponent } from './pages/supply-detail/supply-detail.component';
 import { UserDetailComponent } from './pages/user-detail/user-detail.component';
-import { FileSelectDirective } from 'ng2-file-upload';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 @NgModule({
@@ -33,8 +33,7 @@ import { FileSelectDirective } from 'ng2-file-upload';
     SupplyPageComponent,
     MyAlliesComponent,
     SupplyDetailComponent,
-    UserDetailComponent,
-    FileSelectDirective
+    UserDetailComponent
 
   ],
   imports: [
@@ -42,7 +41,7 @@ import { FileSelectDirective } from 'ng2-file-upload';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-
+    FileUploadModule
   ],
   providers: [
     AuthApiService,

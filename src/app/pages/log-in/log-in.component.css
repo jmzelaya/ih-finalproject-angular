@@ -2,3 +2,20 @@
   margin-top: 10px;
 
 }
+
+label{
+  color: white;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+button{
+  background-color: #AE6D4C;
+  padding: 4px;
+  width: 60px;
+  color: white;
+  font-size: 14px;
+  border-radius: 0px;
+  border: none;
+  box-shadow: none;
+}
