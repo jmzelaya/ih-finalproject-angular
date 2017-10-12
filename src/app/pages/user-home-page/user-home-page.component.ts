@@ -8,7 +8,7 @@ import { RecentSurvivorComponent } from '../../components/recent-survivor/recent
 import { AllyApiService } from '../../services/ally-api.service'
 import { FileUploader } from 'ng2-file-upload';
 import { DatePipe } from '@angular/common';
-
+import { environment } from '../../../environments/environment';
 
 
 @Component({
@@ -18,16 +18,18 @@ import { DatePipe } from '@angular/common';
 })
 export class UserHomePageComponent implements OnInit {
 
+  baseUrl: string = environment.apiUrl;
+
   myUploader =
   new FileUploader(
     {
       method: 'POST',
-      url: `http://localhost:3000` + '/api/posts',
+      url: this.baseUrl + '/api/posts',
       itemAlias: 'postImage'
     }
   );
 
-  imageDomain = 'http://localhost:3000';
+  imageDomain = this.baseUrl;
   posts: any[] = [];
 
   allyPosts = [];
@@ -59,7 +61,7 @@ export class UserHomePageComponent implements OnInit {
         }
       }//close get loginstatus
     )
-    
+
     this.postThang.getMyPosts()
       .subscribe(
         (postsFromApi: any[]) => {
