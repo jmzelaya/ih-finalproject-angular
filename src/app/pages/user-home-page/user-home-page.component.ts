@@ -18,18 +18,16 @@ import { environment } from '../../../environments/environment';
 })
 export class UserHomePageComponent implements OnInit {
 
-  baseUrl: string = environment.apiUrl;
-
   myUploader =
   new FileUploader(
     {
       method: 'POST',
-      url: 'this.baseUrl' + '/api/posts',
+      url: environment.apiUrl + '/api/posts',
       itemAlias: 'postImage'
     }
   );
 
-  imageDomain = 'this.baseUrl';
+  imageDomain = environment.apiUrl;
   posts: any[] = [];
 
   allyPosts = [];
