@@ -9,6 +9,11 @@
   height: 100vh;
   position: relative;
 }
+
+.form-group {
+  margin: 0px;
+}
+
 .layer-three {
   position: absolute;
   bottom: 100px;

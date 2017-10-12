@@ -118,7 +118,7 @@ export class UserHomePageComponent implements OnInit {
       this.postThang.postNewPost(this.newPost)
         .subscribe(
           (fullPostDetails) => {
-              console.log('New phone success', fullPostDetails);
+              console.log('New post success', fullPostDetails);
                this.posts.unshift(fullPostDetails);
 
 
@@ -131,7 +131,7 @@ export class UserHomePageComponent implements OnInit {
           },
 
           (errorInfo) => {
-              console.log('New phone error', errorInfo);
+              console.log('New post error', errorInfo);
 
               if (errorInfo.status === 400) {
                   this.errorMessage = 'Validation error.';
