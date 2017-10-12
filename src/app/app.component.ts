@@ -57,7 +57,7 @@ export class AppComponent {
     this.authThang.logOut()
       .subscribe(
         (apiResponse) => {
-           this.routerThang.navigate(['/login'])
+           this.routerThang.navigate(['/'])
         }
       );
   }//CLOSE logMeOut(...)

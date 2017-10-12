@@ -25,6 +25,7 @@ export class UserHomePageComponent implements OnInit {
     }
   );
 
+  imageDomain = 'http://localhost:3000/public';
   posts: any[] = [];
 
   allyPosts = [];

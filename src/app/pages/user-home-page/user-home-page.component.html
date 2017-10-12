@@ -13,16 +13,19 @@
               name="postImage" ng2FileSelect [uploader]="myUploader">
           </form>
 
-          <button class="upload btn pull-left"> Upload Image </button>
+          <!-- <button class="upload btn pull-left"> Upload Image </button>
           <div class="clearfix">
 
-          </div>
+          </div> -->
       </div>
       <h2> Recent Posts </h2>
       <div *ngFor= "let onePost of posts">
-        <div class= "well">
-          <img [src] = "imageDomain + onePost.postImage" />
-          <h4> {{ onePost.author.firstName }} {{ onePost.author.lastName }}</h4>
+        <div>
+          <div  class="well">
+            <h4> {{ onePost.author.firstName }} {{ onePost.author.lastName }}</h4>
+            <h5> {{ onePost.createdAt | date:'yMMMdjms' }}</h5>
+          </div>
+          <img [src]="imageDomain + onePost.image" />
 
           <p>
             {{ onePost.textContent }}

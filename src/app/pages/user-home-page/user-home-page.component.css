@@ -45,3 +45,11 @@ hr{
   border-color: #9CA4A6;
   margin: 16px -18px;
 }
+
+h4{
+  float:left;
+}
+
+h5{
+  float: right;
+}
