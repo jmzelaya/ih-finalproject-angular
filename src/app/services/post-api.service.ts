@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { PostInfo } from '../interfaces/post-info'
+import { environment } from '../../environments/environment';
+
 
 @Injectable()
 export class PostApiService {
 
-  baseUrl: string = 'http://localhost:3000';
+baseUrl: string = environment.apiUrl;
 
   constructor(
     private httpThang: HttpClient

@@ -2,11 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { SupplyInfo } from '../interfaces/supply-info';
+import { environment } from '../../environments/environment';
+
+
 
 @Injectable()
 export class SupplyApiService {
 
-  baseUrl: string = 'http://localhost:3000';
+  baseUrl: string = environment.apiUrl;
 
   constructor(
     private httpThang: HttpClient

@@ -4,12 +4,13 @@ import { SignupInfo } from '../interfaces/signup-info';
 import { LoginInfo } from '../interfaces/login-info';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import 'rxjs/add/operator/do'
+import { environment } from '../../environments/environment';
 
 
 @Injectable()
 export class AuthApiService {
 
-  baseUrl: string = 'http://localhost:3000';
+  baseUrl: string = environment.apiUrl;
 
   // the thing that receives the changes
   loginStatusSubject = new BehaviorSubject<any>({ isLoggedIn: false });
@@ -29,7 +30,7 @@ export class AuthApiService {
               this.baseUrl + '/api/process-signup',
               userInfo,
               { withCredentials: true }
-          ) 
+          )
           .do((userInfo) => {
               this.loginStatusSubject.next({
                   isLoggedIn: true,
