@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { AllyApiService } from '../../services/ally-api.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DatePipe } from '@angular/common';
+import { PostApiService } from '../../services/post-api.service';
 
 @Component({
   selector: 'app-recent-survivor',
@@ -20,7 +21,8 @@ export class RecentSurvivorComponent implements OnInit {
     private httpThang: HttpClient,
     private authThang: AuthApiService,
     private allyThang: AllyApiService,
-    private activatedThang: ActivatedRoute
+    private activatedThang: ActivatedRoute,
+    private postThang: PostApiService
   ) { }
 
   ngOnInit() {
@@ -38,7 +40,7 @@ export class RecentSurvivorComponent implements OnInit {
           .subscribe(
             (theAllyFromApi) => {
                   console.log("success");
-            }
+            },
 
           );
 

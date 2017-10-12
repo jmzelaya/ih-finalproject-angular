@@ -9,7 +9,8 @@
 
               <hr />
             <button class="submit btn pull-right"> Submit Post </button>
-
+            <input  id="post-image-input" type="file"
+              name="postImage" ng2FileSelect [uploader]="myUploader">
           </form>
 
           <button class="upload btn pull-left"> Upload Image </button>
@@ -20,6 +21,7 @@
       <h2> Recent Posts </h2>
       <div *ngFor= "let onePost of posts">
         <div class= "well">
+          <img [src] = "imageDomain + onePost.postImage" />
           <h4> {{ onePost.author.firstName }} {{ onePost.author.lastName }}</h4>
 
           <p>

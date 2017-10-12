@@ -6,6 +6,8 @@ import { PostApiService } from '../../services/post-api.service'
 import { PostInfo } from '../../interfaces/post-info';
 import { RecentSurvivorComponent } from '../../components/recent-survivor/recent-survivor.component';
 import { AllyApiService } from '../../services/ally-api.service'
+import { FileUploader } from 'ng2-file-upload';
+
 
 @Component({
   selector: 'app-user-home-page',
@@ -13,6 +15,15 @@ import { AllyApiService } from '../../services/ally-api.service'
   styleUrls: ['./user-home-page.component.css']
 })
 export class UserHomePageComponent implements OnInit {
+
+  myUploader =
+  new FileUploader(
+    {
+      method: 'POST',
+      url: `http://localhost:3000` + '/api/posts',
+      itemAlias: 'postImage'
+    }
+  );
 
   posts: any[] = [];
 
@@ -22,6 +33,7 @@ export class UserHomePageComponent implements OnInit {
 
   newPost: PostInfo = {
     textContent: '',
+    postImage: '',
     author: ''
   };
 
@@ -63,33 +75,103 @@ export class UserHomePageComponent implements OnInit {
   }//CLOSE ngOnInit()
 
 
+  receiveCow(){
+      // if there images to upload, save phone with image.
+    if (this.myUploader.getNotUploadedItems().length > 0) {
+        this.savePhoneWithImage();
+    }
 
+    // otherwise there are NO images to upload, do regular AJAX.
+    else {
+        this.savePhoneNoImage();
+    }
+  }
 
-  receiveCow() { //should probably make this not "receiveCow() :D"
-    //call service
-    this.postThang.postNewPost(this.newPost)
-      .subscribe(
-        (fullPostDetails) => {
+  savePhoneWithImage() {
+      this.myUploader.onBuildItemForm = (item, form) => {
+          form.append('textContent', this.newPost.textContent);
+      };
+
+      this.myUploader.onSuccessItem = (item, response) => {
+          const fullPostDetails = JSON.parse(response);
           console.log('New post success', fullPostDetails);
-          this.posts.unshift(fullPostDetails);
+
+          this.errorMessage = '';
           this.newPost = {
             textContent: '',
+            postImage: '',
             author: ''
           };
-        },
+      };
 
-        (errorInfo) => {
-          if(errorInfo.status === 400) {
-            this.errorMessage = 'Validation error'
-          }
+      this.myUploader.onErrorItem = (item, response) => {
+          console.log('New post error', response);
 
-          else {
-            this.errorMessage = 'Unknown error. Try again later'
+          this.errorMessage = 'Unknown error. Try again later.'
+      }; // onErrorItem
+
+      // START the AJAX request
+      this.myUploader.uploadAll();
+  } // savePhoneWithImage()
+
+  savePhoneNoImage() {
+      // send "this.newPOst to the backend for saving
+      this.postThang.postNewPost(this.newPost)
+        .subscribe(
+          // SUCCESS! (1st argument of "subscribe()")
+          (fullPostDetails) => {
+              console.log('New phone success', fullPostDetails);
+
+
+              this.errorMessage = '';
+              this.newPost = {
+                textContent: '',
+                author: '',
+                postImage: '',
+              };
+          },
+
+          // ERROR! (2nd argument of "subscribe()")
+          (errorInfo) => {
+              console.log('New phone error', errorInfo);
+
+              if (errorInfo.status === 400) {
+                  this.errorMessage = 'Validation error.';
+              }
+              else {
+                  this.errorMessage = 'Unknown error. Try again later.'
+              }
           }
-          console.log('New Phone Error', errorInfo)
-        }
-      )
-  }//CLOSE receiveCow()
+        ); // .subscribe()
+  } // savePhoneNoImage()
+
+
+  // receiveCow() { //should probably make this not "receiveCow() :D"
+  //   //call service
+  //   this.postThang.postNewPost(this.newPost)
+  //     .subscribe(
+  //       (fullPostDetails) => {
+  //         console.log('New post success', fullPostDetails);
+  //         this.posts.unshift(fullPostDetails);
+  //         this.newPost = {
+  //           textContent: '',
+  //           postImage: '',
+  //           author: ''
+  //         };
+  //       },
+  //
+  //       (errorInfo) => {
+  //         if(errorInfo.status === 400) {
+  //           this.errorMessage = 'Validation error'
+  //         }
+  //
+  //         else {
+  //           this.errorMessage = 'Unknown error. Try again later'
+  //         }
+  //         console.log('New Phone Error', errorInfo)
+  //       }
+  //     )
+  // }//CLOSE receiveCow()
 
 
 
