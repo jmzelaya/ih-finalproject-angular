@@ -24,12 +24,12 @@ export class UserHomePageComponent implements OnInit {
   new FileUploader(
     {
       method: 'POST',
-      url: this.baseUrl + '/api/posts',
+      url: 'this.baseUrl' + '/api/posts',
       itemAlias: 'postImage'
     }
   );
 
-  imageDomain = this.baseUrl;
+  imageDomain = 'this.baseUrl';
   posts: any[] = [];
 
   allyPosts = [];
