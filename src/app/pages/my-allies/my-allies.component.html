@@ -1,12 +1,12 @@
-<p class="error" *ngIf="errorMessage">
+<!-- <p class="error" *ngIf="errorMessage">
   {{ errorMessage }}
-</p>
+</p> -->
 
 <h2> Your Allies </h2>
 
 <ul>
   <li *ngFor = "let oneAlly of allies">
-    <img src="/assets/user-icon.png"/> 
+    <img src="/assets/user-icon.png"/>
     {{ oneAlly.firstName }} {{oneAlly.lastName}}
   </li>
 </ul>
