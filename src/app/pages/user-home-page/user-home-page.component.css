@@ -63,11 +63,13 @@ h4{
   color: #3E4D56;
   font-size: 20px;
   margin: 0px;
+  text-transform: capitalize;
 }
 
 h4 span{
   font-size: 15px;
   display: block;
+  text-transform: capitalize;
 }
 
 
@@ -76,11 +78,13 @@ h5{
   color: #3E4D56;
   font-size: 15px;
   text-align: right;
+  text-transform: capitalize;
 }
 
 h5 span{
   font-size: 13px;
   display: block;
+  text-transform: capitalize;
 }
 
 .file-upload{
@@ -111,6 +115,7 @@ p{
   color: #3E4D56 ;
   letter-spacing: 0;
   line-height: 25px;
+  text-transform: capitalize;
 }
 
 
