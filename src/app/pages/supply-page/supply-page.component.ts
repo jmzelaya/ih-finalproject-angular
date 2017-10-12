@@ -60,7 +60,7 @@ export class SupplyPageComponent implements OnInit {
             else {
               this.errorMessage = 'Unknown error. Try again later'
             }
-            console.log('New Phone Error', errorInfo)
+            console.log('New Supply Error', errorInfo)
           }
         )
     }//CLOSE receiveCow()

@@ -8,7 +8,7 @@
   <ul>
     <li *ngFor="let oneSurvivor of survivors">
       <img class="pull-left user-icon" src="/assets/user-icon.png"/>
-      <p> {{ oneSurvivor.firstName }} {{ oneSurvivor.lastName }} <br /> Joined: {{oneSurvivor.createdAt | date:'mediumDate' }}</p>
+      <p> {{ oneSurvivor.firstName }} {{ oneSurvivor.lastName }} <br /> <span> Joined: {{oneSurvivor.createdAt | date:'mediumDate' }}</span></p>
       <!-- <a routerLink="/survivor-details">Details</a> -->
       <button class="btn pull-right" (click) = "addAlly(oneSurvivor._id)"> Add Ally </button>
       <hr />

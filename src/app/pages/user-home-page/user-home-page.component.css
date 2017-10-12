@@ -11,6 +11,7 @@
   font-family: futura;
   height: 100vh;
   position: relative;
+  background-position: fixed;
 }
 
 
@@ -41,7 +42,7 @@ input{
 }
 
 .left{
-  padding: 60px;
+  padding: 10px 60px;
 }
 
 .row{

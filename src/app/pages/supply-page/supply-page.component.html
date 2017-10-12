@@ -1,27 +1,29 @@
-<div class="row">
-  <div class="col-sm-8">
-    <div class="post-feed-wrapper well form-group">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="post-feed-wrapper well form-group">
 
-        <form (ngSubmit)="submitSupply()">
-          <label for="productName"> What is the supply?</label>
-          <input id="productName" type="text" placeholder="e.g. Shampoo"
-            class="form-control" name="supplyName" [(ngModel)]="newSupply.productName"/>
+          <form (ngSubmit)="submitSupply()">
+            <label for="productName"> What is the supply?</label>
+            <input id="productName" type="text" placeholder="e.g. Shampoo"
+              class="form-control" name="supplyName" [(ngModel)]="newSupply.productName"/>
 
-        <label for="productDescription"> Description </label>
-        <input id="productDescription" type="text" placeholder="e.g. Rich, luxorious lather"
-          class="form-control" name="productDescription" [(ngModel)]="newSupply.productDescription"/>
+          <label for="productDescription"> Description </label>
+          <input id="productDescription" type="text" placeholder="e.g. Rich, luxorious lather"
+            class="form-control" name="productDescription" [(ngModel)]="newSupply.productDescription"/>
 
-        <label for="productValue"> What do you want in return?</label>
-        <input id="productValue" type="text" placeholder="e.g. Seeking canned beans"
-          class="form-control" name="supplyValue" [(ngModel)]="newSupply.productValue"/>
+          <label for="productValue"> What do you want in return?</label>
+          <input id="productValue" type="text" placeholder="e.g. Seeking canned beans"
+            class="form-control" name="supplyValue" [(ngModel)]="newSupply.productValue"/>
 
-        <label for="productTag"> What is the supply?</label>
-        <input id="productTag" type="text" placeholder="e.g. Hygeine"
-            class="form-control" name="supplyTag" [(ngModel)]="newSupply.tag"/>
+          <label for="productTag"> What is the supply?</label>
+          <input id="productTag" type="text" placeholder="e.g. Hygeine"
+              class="form-control" name="supplyTag" [(ngModel)]="newSupply.tag"/>
 
-        <button class="btn btn-success"> Post </button>
+          <button class="btn btn-success"> Post </button>
 
-        </form>
+          </form>
+      </div>
     </div>
   </div>
 </div>
