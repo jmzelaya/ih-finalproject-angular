@@ -48,8 +48,72 @@ hr{
 
 h4{
   float:left;
+  color: #3E4D56;
+  font-size: 20px;
+  margin: 0px;
 }
+
+h4 span{
+  font-size: 15px;
+  display: block;
+}
+
 
 h5{
   float: right;
+  color: #3E4D56;
+  font-size: 15px;
+  text-align: right;
+}
+
+h5 span{
+  font-size: 13px;
+  display: block;
+}
+
+.file-upload{
+  padding: 0px;
+}
+
+.post-header{
+  background-color: #EEE7D6;
+  padding: 8px 20px;
+}
+
+.user-icon{
+  margin-right: 15px;
+}
+
+.post-content{
+  background: #FFFFFF ;
+  box-shadow: 0 2px 4px 0 rgba(156,164,166,0.43);
+  padding: 20px;
+}
+
+.post-content img{
+  width: 100%;
+}
+
+p{
+  font-size: 18px;
+  color: #3E4D56 ;
+  letter-spacing: 0;
+  line-height: 25px;
+}
+
+
+.post-content .div-social img{
+  width: auto;
+}
+
+.div-social span{
+  font-size: 15px;
+  color: #3E4D56 ;
+  letter-spacing: 0;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.post{
+  margin-bottom: 30px;
 }

@@ -7,6 +7,8 @@ import { PostInfo } from '../../interfaces/post-info';
 import { RecentSurvivorComponent } from '../../components/recent-survivor/recent-survivor.component';
 import { AllyApiService } from '../../services/ally-api.service'
 import { FileUploader } from 'ng2-file-upload';
+import { DatePipe } from '@angular/common';
+
 
 
 @Component({

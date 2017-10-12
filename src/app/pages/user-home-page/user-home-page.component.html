@@ -9,7 +9,7 @@
 
               <hr />
             <button class="submit btn pull-right"> Submit Post </button>
-            <input  id="post-image-input" type="file"
+            <input class="file-upload" id="post-image-input" type="file"
               name="postImage" ng2FileSelect [uploader]="myUploader">
           </form>
 
@@ -20,16 +20,27 @@
       </div>
       <h2> Recent Posts </h2>
       <div *ngFor= "let onePost of posts">
-        <div>
-          <div  class="well">
-            <h4> {{ onePost.author.firstName }} {{ onePost.author.lastName }}</h4>
-            <h5> {{ onePost.createdAt | date:'yMMMdjms' }}</h5>
-          </div>
-          <img [src]="imageDomain + onePost.image" />
+        <div class="post">
+          <div class="post-header">
+            <img class="pull-left user-icon" src="/assets/user-icon.png"/>
+            <h4> {{ onePost.author.firstName }} <span>{{ onePost.author.lastName }}</span></h4>
+            <h5> {{ onePost.createdAt | date:'mediumDate' }} <span>{{ onePost.createdAt | date: 'shortTime' }}</span></h5>
+            <div class="clearfix">
 
-          <p>
-            {{ onePost.textContent }}
-          </p>
+            </div>
+          </div>
+          <div class="post-content">
+            <!-- <img [src]="imageDomain + onePost.image" /> -->
+            <img src="/assets/post-placeholder.jpg" />
+
+            <p>
+              {{ onePost.textContent }}
+            </p>
+            <div class="div-social">
+              <span><img src="/assets/comment-icon.png"/> Comment</span>
+              <span><img src="/assets/like-icon.png"/> Like</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
