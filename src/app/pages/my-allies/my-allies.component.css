@@ -47,3 +47,13 @@ h2{
   margin: 5px -10px 0px -10px;
   text-transform: none;
 }
+
+.col-sm-3 .right{
+  overflow: auto;
+  height: 429px;
+  background-color: white;
+}
+
+.col-sm-3 {
+  padding: 0px;
+}
