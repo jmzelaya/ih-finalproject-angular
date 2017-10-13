@@ -23,6 +23,7 @@ export class SupplyDetailComponent implements OnInit {
     productName: '',
     productDescription: '',
     productValue: '',
+    supplyImage: ''
   }
 
   constructor(

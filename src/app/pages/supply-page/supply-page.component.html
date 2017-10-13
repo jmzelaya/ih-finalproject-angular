@@ -16,6 +16,9 @@
           <input id="productValue" type="text" placeholder="e.g. Seeking canned beans"
             class="form-control" name="supplyValue" [(ngModel)]="newSupply.productValue"/>
 
+          <input class="file-upload" id="post-image-input" type="file"
+            name="postImage" ng2FileSelect [uploader]="myUploader">
+
           <button class="btn btn-success"> Post </button>
 
           </form>
@@ -26,6 +29,7 @@
 <ul>
   <li *ngFor= "let oneSupply of supplies">
     <div class="supply">
+        <img [src]="imageDomain + oneSupply.supplyImage" />
       <h3> {{ oneSupply.productName }}</h3>
       <p> {{ oneSupply.productValue }} </p>
       <a [routerLink] = "['/supplies', oneSupply._id]">Details</a>
