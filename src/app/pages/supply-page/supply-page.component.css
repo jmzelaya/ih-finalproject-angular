@@ -1,7 +1,30 @@
 .supply{
-  border: 1px solid black;
+  background: white;
+  box-shadow: 0 2px 4px 0 rgba(156,164,166,0.43);
+  margin-bottom: 20px;
+  padding: 10px;
+  text-transform: capitalize;
 }
 
-.post-feed-wrapper{
-  margin: 120px;
+.supply img{
+  float: left;
+  margin-right: 10px;
+}
+
+ul{
+  margin: 0px;
+  padding: 0px;
+}
+
+li{
+  /*padding: 0px 20px;*/
+  list-style: none;
+}
+
+.supply-trade .supply-value{
+  background-color: #AE6D4C;
+  padding: 12px;
+  color: white;
+  text-align: center;
+  font-weight: lighter;
 }

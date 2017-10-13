@@ -25,14 +25,25 @@
       </div>
     </div>
   </div>
-</div>
 <ul>
   <li *ngFor= "let oneSupply of supplies">
     <div class="supply">
-        <img [src]="imageDomain + oneSupply.supplyImage" />
-      <h3> {{ oneSupply.productName }}</h3>
-      <p> {{ oneSupply.productValue }} </p>
-      <a [routerLink] = "['/supplies', oneSupply._id]">Details</a>
+      <img class="pull-left" src="/assets/supplies-icon.png"/>
+      <div class="supply-text pull-left">
+
+      <img [src]="imageDomain + oneSupply.supplyImage" />
+      <h3 class="supply-name"> {{ oneSupply.productName }}</h3>
+      <p class="supply-description"> {{ oneSupply.productDescription }} </p>
+      <div class="supply-trade">
+        <p class="supply-value"> Trading for {{ oneSupply.productValue }} </p>
+      </div>
+      </div>
+      <!-- <a [routerLink] = "['/supplies',k oneSupply._id]">Details</a> -->
+      <div class="clearfix">
+
+      </div>
     </div>
   </li>
 </ul>
+
+</div>
