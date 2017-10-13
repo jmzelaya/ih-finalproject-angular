@@ -26,7 +26,7 @@ export class MyAlliesComponent implements OnInit {
         }
       );//CLOSE this.postThang.getAllies()
 
-      
+
 
   }//CLOSE ngOnInit
 

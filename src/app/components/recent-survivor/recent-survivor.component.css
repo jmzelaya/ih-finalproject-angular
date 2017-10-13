@@ -1,7 +1,11 @@
 .recent-survivor{
   overflow: auto;
-  height: 410px;
+  height: 429px;
   background-color: white;
+}
+
+.recent-survivor h2{
+  text-align: center;
 }
 
 ul{

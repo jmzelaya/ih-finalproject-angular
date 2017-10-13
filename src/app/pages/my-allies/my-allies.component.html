@@ -4,9 +4,11 @@
 
 <h2> Your Allies </h2>
 
-<ul>
-  <li *ngFor = "let oneAlly of allies">
-    <img src="/assets/user-icon.png"/>
-    {{ oneAlly.firstName }} {{oneAlly.lastName}}
-  </li>
-</ul>
+
+  <div class="ally" *ngFor = "let oneAlly of allies">
+      <img src="/assets/user-icon-large.png"/>
+      <p>{{ oneAlly.firstName }} {{oneAlly.lastName}}</p>
+      <p> {{ oneAlly.createdAt }}</p>
+    <a href="mailto:{{oneAlly.email}}"> {{oneAlly.email}} </a>  
+
+  </div>
