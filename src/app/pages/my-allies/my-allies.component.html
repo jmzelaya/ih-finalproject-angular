@@ -4,11 +4,23 @@
 
 <h2> Your Allies </h2>
 
+<div>
+  <div class="col-sm-9 ally-list">
 
-  <div class="ally" *ngFor = "let oneAlly of allies">
+  <div class="ally pull-left" *ngFor = "let oneAlly of allies">
       <img src="/assets/user-icon-large.png"/>
-      <p>{{ oneAlly.firstName }} {{oneAlly.lastName}}</p>
-      <p> {{ oneAlly.createdAt }}</p>
-    <a href="mailto:{{oneAlly.email}}"> {{oneAlly.email}} </a>  
-
+      <p class="ally-first-name">{{ oneAlly.firstName }}</p>
+      <p class="ally-last-name">{{oneAlly.lastName}} </p>
+      <p class="ally-date"> Joined: {{ oneAlly.createdAt | date:'mediumDate'}}</p>
+    <a href="mailto:{{oneAlly.email}}"> {{oneAlly.email}} </a>
   </div>
+</div>
+
+  <div class="col-sm-3 right">
+
+    <app-recent-survivor></app-recent-survivor>
+    <img src="/assets/ad1.png">
+    <img src="/assets/ad2.png">
+    <img src="/assets/ad3.png">
+  </div>
+</div>

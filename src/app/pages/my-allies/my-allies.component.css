@@ -1,3 +1,45 @@
-li{
-  list-style: none;
+.ally-list .ally{
+  background-color: white;
+  width: 29%;
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-bottom: 20px;
+  color: #3E4D56;
+  padding: 10px 10px 0px 10px;
+  text-transform: capitalize;
+
+}
+
+
+.ally-list .ally img{
+  width: 70px;
+  display: block;
+  margin: 0 auto;
+}
+
+.ally-list .ally .ally-first-name{
+  font-size: 20px;
+}
+
+.ally-list .ally p{
+  padding: 0px;
+  margin: 0px;
+}
+
+.ally-list .ally .ally-date{
+  font-size: 12px;
+
+}
+
+
+.ally-list .ally a{
+  display: block;
+  background-color: #BCABB0;]font-size: 14px;
+  color: #FFFFFF ;
+  letter-spacing: 0;
+  line-height: 25px;
+  text-align: center;
+  padding: 5px;
+  margin: 5px -10px 0px -10px;
+  text-transform: none;
 }
